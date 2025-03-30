@@ -16,6 +16,22 @@
     border: 2px solid #444444;
   }
 
+  select.input option:disabled{
+    display: none;
+  }
+
+  select:invalid {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+select:invalid option {
+    color: rgba(255, 255, 255, 1);
+}
+
+textarea.input{
+    min-height: 100px;
+}
+
   .input:focus {
     border-color: green;
     outline: none;

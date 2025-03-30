@@ -21,6 +21,11 @@ function validateFormData(formData) {
         errors.message = 'Message is required';
     }
 
+    // Check country (select)
+    if (typeof formData.country !== 'string' || formData.country.trim() === '') {
+        errors.country = 'Country selection is required.';
+    }
+
     return errors;
 }
 

@@ -29,6 +29,7 @@ export const FaqTable  = () => {
             <thead className={styles.thead}>
                 <tr className={styles.tr}>
                     <td className={styles.td}>Name</td>
+                    <td className={styles.td}>Country</td>
                     <td className={styles.td}>Message</td>
                 </tr>
             </thead>
@@ -36,6 +37,7 @@ export const FaqTable  = () => {
                 { faqData.map((item) => (
                     <tr className={styles.tr} key={ item.id }>
                         <td className={styles.td}>{ item.data.name }</td>
+                        <td className={styles.td}>{ item.data.country.charAt(0).toUpperCase() + item.data.country.slice(1) }</td>
                         <td className={styles.td}>{ item.data.message }</td>
                     </tr>
                 ))}

@@ -6,6 +6,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from './../../../../../../firebase';
 import { handleInputChange } from "../../../../functions/formHandlers";
 import { validateFormData } from "../../../../functions/formValidation";
+import { Select } from "../../../form/Select";
 
 export const FaqForm = () => {
 
@@ -13,6 +14,7 @@ export const FaqForm = () => {
         name: '', 
         email: '',
         message: '',
+        country: [],
     }
 
     // formos duomenu valdymas naudojant react state
@@ -57,6 +59,22 @@ export const FaqForm = () => {
           console.error("Error adding document: ", e);
         }
     }
+
+    const countryOptions = [
+      { label: "Lithuania", value: "lithuania" },
+      { label: "Estonia", value: "estonia" },
+      { label: "Latvia", value: "latvia" },
+      { label: "Finland", value: "finland" },
+      { label: "Sweden", value: "sweden" },
+      { label: "Norway", value: "norway" },
+      { label: "Denmark", value: "denmark" },
+      { label: "Poland", value: "poland" },
+      { label: "Germany", value: "germany" },
+      { label: "Ukraine", value: "ukraine" },
+      { label: "Slovakia", value: "slovakia" },
+      { label: "Hungary", value: "hungary" },
+      { label: "Moldova", value: "moldova" }
+    ];
    
     return (
     <form onSubmit={sendFormData} noValidate>
@@ -80,6 +98,15 @@ export const FaqForm = () => {
         value={formData.email}
         error={formErrors.email}
         onChange={handleChange}/>
+        <Select
+         id={"country"} 
+         name={"country"} 
+         label={"Country"}
+         required={true}
+         options={countryOptions}
+         value={formData.country}
+         error={formErrors.country}
+         onChange={handleChange}/>
       <Textarea 
         id={"message"} 
         name={"message"} 
