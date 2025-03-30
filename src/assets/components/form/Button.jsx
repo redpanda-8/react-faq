@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import styles from "./Button.module.css"
 
 export const Button = (props) => {
     const {
@@ -8,7 +9,7 @@ export const Button = (props) => {
     } = props;
 
     return (
-        <button type={type} onClick={onClick}>{label}</button>
+        <button className={styles.cBtn} type={type} onClick={onClick}>{label}</button>
     );
 };
 

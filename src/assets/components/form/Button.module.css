@@ -1,0 +1,15 @@
+.cBtn {
+    margin: 10px 0 0;
+    padding: 8px;
+    border: 2px solid green;
+    background-color: green;
+    color: white;
+    transition: all .25s ease-in-out;
+    border-radius: 5px;
+  }
+
+  .cBtn:hover {
+    background-color: white;
+    color: green;
+    border-color: green;
+  }

@@ -4,7 +4,6 @@ import { Faq } from './assets/components/pages/faq/Index'
 function App() {
   return (
     <Faq/>
-    
   )
 }
 

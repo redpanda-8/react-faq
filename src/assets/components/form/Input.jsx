@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import styles from "./Input.module.css";
 
 export const Input = (props) => {
     const {
@@ -10,15 +11,18 @@ export const Input = (props) => {
         error,
         value,
         onChange,
+        required,
+        info,
     } = props;
 
     return (
-        <>
-            <label htmlFor={id}>{label}</label>
-            <input id={id} name={name} type={type} value={value} onChange={onChange} placeholder={placeholder || label} />
+        <div className={styles.formRow}>
+            <label className={styles.label} htmlFor={id}>{label}{required && <span className={styles.errorMsg}>*</span> }</label>
+            <input className={styles.input} id={id} name={name} type={type} value={value} onChange={onChange} placeholder={placeholder || label} required={required} />
             {/* if error - show error */}
-            {error && <span>{error}</span>} 
-        </>
+            {info && <span className={styles.infoMsg}>{info}</span>} 
+            {error && <span className={styles.errorMsg}>{error}</span>} 
+        </div>
     );
 };
 

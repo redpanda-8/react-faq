@@ -1,5 +1,6 @@
 #root {
-  max-width: 1280px;
+  max-width: 770px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -8,37 +9,17 @@
 form {
   display: flex;
   flex-direction: column;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 3px 6px rgba(0,0,0, 0.75);
 }
 
-label {
-  padding: 0 10px 5px;
-  color: #000000;
-}
-textarea,
-input {
-  padding: 10px 10px;
-  color: #ffffff;
-  font-size: 1rem;
-  min-height: 42px;
+.conteiner {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color:black;
+    box-shadow: 0 3px 6px rgba(0,0,0, 0.75);
+    
 }
 
-button {
-  margin: 10px 0 0;
-  padding: 10px 10px;
-  background-color: green;
-  color: white;
+.conteiner + .conteiner {
+  margin-top: 20px;
 }
-
-span {
-  color: red;
-}
-
-  .pomato{
-    background-color: deeppink;
-    width: 150px;
-    height: 150px;
-  }

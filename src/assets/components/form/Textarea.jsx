@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import styles from "./Input.module.css";
 
 export const Textarea = (props) => {
     const {
@@ -8,15 +9,19 @@ export const Textarea = (props) => {
         name,
         error,
         onChange,
+        required,
+        value,
+        info,
     } = props;
 
     return (
-        <>
-            <label htmlFor={id}>{label}</label>
-            <textarea id={id} name={name} onChange={onChange} placeholder={placeholder || label} />
+        <div className={styles.formRow}>
+            <label className={styles.label} htmlFor={id}>{label} {required && <span className={styles.errorMsg}>*</span> }</label>
+            <textarea className={styles.input} id={id} name={name} onChange={onChange} placeholder={placeholder || label} required={required} value={value} />
             {/* if error - show error */}
-            {error && <span>{error}</span>} 
-        </>
+            {info && <span className={styles.infoMsg}>{info}</span>}
+            {error && <span className={styles.errorMsg}>{error}</span>} 
+        </div>
     );
 };
 
