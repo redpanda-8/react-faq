@@ -4,10 +4,11 @@ export const Button = (props) => {
     const {
         type,
         label,
+        onClick,
     } = props;
 
     return (
-        <button type={type}>{label}</button>
+        <button type={type} onClick={onClick}>{label}</button>
     );
 };
 

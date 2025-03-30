@@ -1,33 +1,26 @@
 import PropTypes from "prop-types";
 
-export const Input = (props) => {
+export const Textarea = (props) => {
     const {
         label,
-        type,
         placeholder,
         id,
         name,
         error,
-        value,
         onChange,
     } = props;
 
     return (
         <>
             <label htmlFor={id}>{label}</label>
-            <input id={id} name={name} type={type} value={value} onChange={onChange} placeholder={placeholder || label} />
+            <textarea id={id} name={name} onChange={onChange} placeholder={placeholder || label} />
             {/* if error - show error */}
             {error && <span>{error}</span>} 
         </>
     );
 };
 
-Input.propTypes = {
+Textarea.propTypes = {
     label: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(['text', 'email', 'tel']),
     placeholder: PropTypes.string
-};
-
-Input.defaultProps = {
-    type: "text"
 };

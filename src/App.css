@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
 }
+* {box-sizing: border-box;}
 
 form {
   display: flex;
@@ -17,10 +18,12 @@ label {
   padding: 0 10px 5px;
   color: #000000;
 }
+textarea,
 input {
   padding: 10px 10px;
   color: #ffffff;
   font-size: 1rem;
+  min-height: 42px;
 }
 
 button {
@@ -33,3 +36,9 @@ button {
 span {
   color: red;
 }
+
+  .pomato{
+    background-color: deeppink;
+    width: 150px;
+    height: 150px;
+  }
