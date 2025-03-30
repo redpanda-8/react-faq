@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import { Button } from "../../../form/Button";
-import { Input } from "../../../form/input";
+import { Input } from "../../../form/Input";
 import { Textarea } from "../../../form/Textarea";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from './../../../../../../firebase';
